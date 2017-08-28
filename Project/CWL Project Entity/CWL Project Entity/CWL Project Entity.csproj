@@ -72,19 +72,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ACMEV2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ACMEV2.tt</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="ACME.cs" />
-    <Compile Include="ACME.Designer.cs">
+    <Compile Include="ACMEV2.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ACME.edmx</DependentUpon>
+      <DependentUpon>ACMEV2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACMEV2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ACMEV2.edmx</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees.cs">
+      <DependentUpon>ACMEV2.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -109,12 +121,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="ACME.edmx">
+    <EntityDeploy Include="ACMEV2.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ACME.Designer.cs</LastGenOutput>
+      <LastGenOutput>ACMEV2.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ACME.edmx.diagram">
-      <DependentUpon>ACME.edmx</DependentUpon>
+    <None Include="ACMEV2.edmx.diagram">
+      <DependentUpon>ACMEV2.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -125,6 +137,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ACMEV2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ACMEV2.edmx</DependentUpon>
+      <LastGenOutput>ACMEV2.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ACMEV2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ACMEV2.edmx</DependentUpon>
+      <LastGenOutput>ACMEV2.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

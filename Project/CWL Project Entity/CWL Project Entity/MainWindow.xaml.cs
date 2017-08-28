@@ -50,8 +50,8 @@ namespace CWL_Project_Entity
         }
         private void callmethod()
         {
-        DbContext db = new DbContext(@"C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA");
-        var query = db.Employees.Select(i => i).AsQueryable();
+        using (ACMEEntities db = new ACMEEntities());
+        var query = db.employees.Select(i => i).AsQueryable();
                 try
                     {
                         EntityToExcelSheet(@"C:\Users\Kevin\Documents\CWL Project\Employees.xls", "Employees", query, db);

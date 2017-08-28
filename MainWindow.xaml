@@ -1,0 +1,9 @@
+﻿<Window x:Class="ACME.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ACME" Height="268" Width="525">
+    <Grid>
+        <Button Name="butInsert" Content="Insert Employees" HorizontalAlignment="Left" Margin="178,68,0,0" VerticalAlignment="Top" Width="156" Click="butInsert_Click"/>
+        <Button Name="butPrintReport" Content="Print Report" HorizontalAlignment="Left" Margin="178,127,0,0" VerticalAlignment="Top" Width="156" Click="butPrintReport_Click"/>
+    </Grid>
+</Window>

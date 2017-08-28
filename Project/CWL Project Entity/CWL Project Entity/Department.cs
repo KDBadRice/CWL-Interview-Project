@@ -12,13 +12,9 @@ namespace CWL_Project_Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Employees
+    public partial class Department
     {
-        public int Id { get; set; }
-        public int EmployeeNumber { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public Nullable<int> Salary { get; set; }
-        public Nullable<System.DateTime> HireDate { get; set; }
+        public int D_Id { get; set; }
+        public string DepartmentName { get; set; }
     }
 }

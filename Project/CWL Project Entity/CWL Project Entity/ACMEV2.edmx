@@ -4,8 +4,15 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ACMEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Table">
+    <Schema Namespace="ACMEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="D_Id" />
+          </Key>
+          <Property Name="D_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Department" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Employee">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -15,16 +22,28 @@
           <Property Name="LastName" Type="varchar" MaxLength="50" />
           <Property Name="Salary" Type="int" />
           <Property Name="HireDate" Type="date" />
+          <Property Name="DepartmentID" Type="int" />
         </EntityType>
         <EntityContainer Name="ACMEModelStoreContainer">
-          <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ACMEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Employees">
+        <EntityContainer Name="ACMEEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Departments" EntityType="ACMEModel.Department" />
+          <EntitySet Name="Employees1" EntityType="ACMEModel.Employee" />
+        </EntityContainer>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="D_Id" />
+          </Key>
+          <Property Name="D_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Employee">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -34,25 +53,32 @@
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Salary" Type="Int32" />
           <Property Name="HireDate" Type="DateTime" Precision="0" />
+          <Property Name="DepartmentID" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="ACMEEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Employees" EntityType="ACMEModel.Employees" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ACMEModelStoreContainer" CdmEntityContainer="ACMEEntities">
-          <EntitySetMapping Name="Employees">
-            <EntityTypeMapping TypeName="ACMEModel.Employees">
-              <MappingFragment StoreEntitySet="Table">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="Salary" ColumnName="Salary" />
+        <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="ACMEModel.Department">
+              <MappingFragment StoreEntitySet="Department">
+                <ScalarProperty Name="DepartmentName" ColumnName="Department" />
+                <ScalarProperty Name="D_Id" ColumnName="D_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees1">
+            <EntityTypeMapping TypeName="ACMEModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
                 <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="EmployeeNumber" ColumnName="EmployeeNumber" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -5,7 +5,8 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="19e82f0d77f84dff9dba03a038631786" Name="Diagram1">
-        <EntityTypeShape EntityType="ACMEModel.Employees" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ACMEModel.Department" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ACMEModel.Employee" Width="1.5" PointX="1" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

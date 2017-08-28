@@ -95,7 +95,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Employees.cs">
+    <Compile Include="Department.cs">
+      <DependentUpon>ACMEV2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
       <DependentUpon>ACMEV2.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
@@ -128,6 +131,7 @@
     <None Include="ACMEV2.edmx.diagram">
       <DependentUpon>ACMEV2.edmx</DependentUpon>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

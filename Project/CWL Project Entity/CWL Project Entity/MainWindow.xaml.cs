@@ -1,28 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Collections;
 using System.Data;
 
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Reflection;
-using System.Data.Objects;
-using System.Data.EntityClient;
-using System.Data.Sql;
-using System.Data.SqlClient;
-using System.Data.Entity;
+using System.Data.Entity.Core.Objects;
+using System.Data.Entity.Core.Objects.DataClasses;
 
+using System.Data.EntityClient;
+using System.Data.SqlClient;
+using System.Data.Entity.Infrastructure;
+using System.Data.Entity;
 
 namespace CWL_Project_Entity
 {
@@ -34,6 +23,8 @@ namespace CWL_Project_Entity
 
     public partial class MainWindow : Window
     {
+
+        CWL_Project_Entity.ACMEEntities db = new CWL_Project_Entity.ACMEEntities();
         /// private Button buttoninsert;
         ///private Button buttonprint;
 
@@ -42,7 +33,7 @@ namespace CWL_Project_Entity
         {
             InitializeComponent();
         }
-        private void insert_button(object sender, RoutedEventArgs e)
+        private void insertbutton_click(object sender, RoutedEventArgs e)
         {
             callmethod();
             MessageBox.Show("Inserted Employees");
@@ -50,11 +41,11 @@ namespace CWL_Project_Entity
         }
         private void callmethod()
         {
-        using (ACMEEntities db = new ACMEEntities());
-        var query = db.employees.Select(i => i).AsQueryable();
+        var query = db.Employees1.Select(i => i).AsQueryable();
                 try
                     {
-                        EntityToExcelSheet(@"C:\Users\Kevin\Documents\CWL Project\Employees.xls", "Employees", query, db);
+                        ObjectContext dbCtx = ((IObjectContextAdapter)db).ObjectContext;
+                        EntityToExcelSheet(@"C:\Users\Kevin\Documents\CWL Project\Employees.xls", "Employees", query, dbCtx);
                     }
                         catch (Exception ex)
                         {
@@ -95,7 +86,7 @@ namespace CWL_Project_Entity
                                 // BE SURE TO CHANGE THIS LINE TO USE *YOUR* DATATABLE 
                                 DataTable dt = EntityToDataTable(result, ctx);
 
-                int rowCount = 1;
+                                int rowCount = 1;
                                 foreach (DataRow dr in dt.Rows)
                                 {
                                     rowCount += 1;
@@ -162,10 +153,10 @@ namespace CWL_Project_Entity
             }
         }
 
-        private void print_button(object sender, RoutedEventArgs e)
+        private void printbutton_click(object sender, RoutedEventArgs e)
         {
             //Query to grab excel data
-            string query = "select * from Employees";
+            //string query = "select * from Employees";
             //Oledb set up
 
 

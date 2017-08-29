@@ -25,7 +25,7 @@ namespace CWL_Project_Entity
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Employee> Employees1 { get; set; }
+        public virtual DbSet<Department1> Department1 { get; set; }
     }
 }

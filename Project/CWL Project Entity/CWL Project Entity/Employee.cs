@@ -21,5 +21,7 @@ namespace CWL_Project_Entity
         public Nullable<int> Salary { get; set; }
         public Nullable<System.DateTime> HireDate { get; set; }
         public Nullable<int> DepartmentID { get; set; }
+    
+        public virtual Department1 Department { get; set; }
     }
 }

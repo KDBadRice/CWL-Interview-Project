@@ -1,0 +1,5 @@
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\obj\Debug\MainWindow.g.cs
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\obj\Debug\App.g.cs
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\obj\Debug\CWL Project Entity_Content.g.cs
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\obj\Debug\CWL Project Entity_MarkupCompile.cache
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\obj\Debug\CWL Project Entity_MarkupCompile.lref

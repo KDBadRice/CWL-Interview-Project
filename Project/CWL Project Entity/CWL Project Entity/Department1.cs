@@ -12,9 +12,18 @@ namespace CWL_Project_Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Department
+    public partial class Department1
     {
-        public int D_Id { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Department1()
+        {
+            this.Employees = new HashSet<Employee>();
+        }
+    
+        public int ID { get; set; }
         public string DepartmentName { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Employee> Employees { get; set; }
     }
 }

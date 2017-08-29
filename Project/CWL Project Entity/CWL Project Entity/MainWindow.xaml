@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="83,113,0,0" VerticalAlignment="Top" Width="75" Click="insert_button"/>
-        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="83,170,0,0" VerticalAlignment="Top" Width="75" Click="print_button"/>
+        <Button x:Name="insertbutton" Content="Insert Employees" HorizontalAlignment="Left" Margin="83,113,0,0" VerticalAlignment="Top" Width="75" Click="insert_button"/>
+        <Button x:Name="printbutton" Content="Print Employees" HorizontalAlignment="Left" Margin="83,170,0,0" VerticalAlignment="Top" Width="75" Click="print_button"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="83,47,0,0" TextWrapping="Wrap" Text="CWL Project" VerticalAlignment="Top" Height="41" Width="202"/>
 
     </Grid>

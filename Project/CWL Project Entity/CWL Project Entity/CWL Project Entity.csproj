@@ -95,7 +95,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Department.cs">
+    <Compile Include="Department1.cs">
       <DependentUpon>ACMEV2.tt</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs">

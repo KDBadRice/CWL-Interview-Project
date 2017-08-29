@@ -12,6 +12,7 @@ using System.Data.EntityClient;
 using System.Data.SqlClient;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity;
+using System.Windows.Controls;
 
 namespace CWL_Project_Entity
 {
@@ -35,6 +36,8 @@ namespace CWL_Project_Entity
         }
         private void insertbutton_click(object sender, RoutedEventArgs e)
         {
+            Button insert_Button = (Button)sender;
+
             callmethod();
             MessageBox.Show("Inserted Employees");
 
@@ -158,6 +161,7 @@ namespace CWL_Project_Entity
             //Query to grab excel data
             //string query = "select * from Employees";
             //Oledb set up
+            Button print_Button = (Button)sender;
 
 
 

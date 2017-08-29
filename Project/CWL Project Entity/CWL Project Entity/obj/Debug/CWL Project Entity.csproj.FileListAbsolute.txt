@@ -3,3 +3,16 @@ C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Enti
 C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\obj\Debug\CWL Project Entity_Content.g.cs
 C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\obj\Debug\CWL Project Entity_MarkupCompile.cache
 C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\obj\Debug\CWL Project Entity_MarkupCompile.lref
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\bin\Debug\CWL Project Entity.exe.config
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\bin\Debug\CWL Project Entity.exe
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\bin\Debug\CWL Project Entity.pdb
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\bin\Debug\EntityFramework.dll
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\bin\Debug\EntityFramework.xml
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\obj\Debug\MainWindow.baml
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\obj\Debug\CWL Project Entity.g.resources
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\obj\Debug\CWL_Project_Entity.Properties.Resources.resources
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\obj\Debug\CWL Project Entity.csproj.GenerateResource.Cache
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\obj\Debug\CWL Project Entity.exe
+C:\Users\Kevin\Documents\CWL Project\Project\CWL Project Entity\CWL Project Entity\obj\Debug\CWL Project Entity.pdb
